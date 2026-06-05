@@ -7,7 +7,7 @@ const Kontext = ({children}) =>{
         const [phoneList,setphoneList] = useState([])
     
     useEffect(() => {
-      axios.get("http://localhost:5000/api/ecommerce/phone-list")
+      axios.get("https://mobile-e-commerce-production.up.railway.app/api/ecommerce/phone-list")
       .then((res)=>{
         setphoneList(res.data.phones)
       })

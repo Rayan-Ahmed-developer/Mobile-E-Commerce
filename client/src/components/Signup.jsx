@@ -22,7 +22,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", signupForm);
+      const res = await axios.post("https://mobile-e-commerce-production.up.railway.app/api/auth/register", signupForm);
       console.log(res.data);
       
       if (res.data.message === "User already exists") {

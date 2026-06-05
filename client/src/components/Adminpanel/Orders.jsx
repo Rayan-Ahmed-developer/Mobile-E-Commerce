@@ -44,7 +44,7 @@ const filtered = orders.filter((o) => {
   // Update status
   let token = localStorage.getItem("token")
   function updateStatus(id, newStatus) {
-    axios.put(`http://localhost:5000/api/auth/update-order-status/${id}`, { status: newStatus },
+    axios.put(`https://mobile-e-commerce-production.up.railway.app/api/auth/update-order-status/${id}`, { status: newStatus },
     {
       headers: {
         Authorization: `Bearer ${token}`
@@ -62,7 +62,7 @@ const filtered = orders.filter((o) => {
 
   
   useEffect(() => {
-     axios.get("http://localhost:5000/api/auth/view-orders",{
+     axios.get("https://mobile-e-commerce-production.up.railway.app/api/auth/view-orders",{
       headers: {
         Authorization: `Bearer ${token}`
       }

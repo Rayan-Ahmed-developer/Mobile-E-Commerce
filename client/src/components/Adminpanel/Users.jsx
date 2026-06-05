@@ -12,7 +12,7 @@ export default function Users() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/view-users", {
+      const res = await axios.get("https://mobile-e-commerce-production.up.railway.app/api/auth/view-users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data.data);
@@ -35,7 +35,7 @@ export default function Users() {
   const removeUser = async (id) => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/auth/delete-user/${id}`, {
+      await axios.delete(`https://mobile-e-commerce-production.up.railway.app/api/auth/delete-user/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(users.filter((u) => u._id !== id));
@@ -50,7 +50,7 @@ export default function Users() {
     const newStatus = isActive ? "blocked" : "Active";
     try {
       await axios.put(
-        `http://localhost:5000/api/auth/update-user-status/${user._id}`,
+        `https://mobile-e-commerce-production.up.railway.app/api/auth/update-user-status/${user._id}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
