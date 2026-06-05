@@ -1,5 +1,4 @@
 // components/AdminPanel.jsx
-// Bas yeh ek file apni route pe laga do — sab kuch iske andar hai
 import { useState } from "react";
 import Dashboard from "./Dashboard";
 import Users from "./Users";
@@ -47,7 +46,7 @@ export default function AdminPanel() {
 
         {/* Logo */}
         <div className="h-14 flex items-center px-5 border-b border-gray-100">
-          <span className="text-lg font-semibold text-gray-800">🛒 CarZone</span>
+          <span className="text-lg font-semibold text-gray-800">🛒 MobileZone</span>
         </div>
 
         {/* Nav */}
