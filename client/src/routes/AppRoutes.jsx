@@ -4,7 +4,7 @@ import Signup from '../components/Signup';
 import Cart from '../components/Cart';
 import Categoryitems from '../components/Categoryitems';
 import Home from '../components/Home';
-import Listproducts from '../components/listProducts';
+import Listproducts from '../components/ListProducts';
 import Details from '../components/Details';
 import OrderDetail from '../components/OrderDetail';
 import Adminpanel from '../components/Adminpanel/AdminPanel';
