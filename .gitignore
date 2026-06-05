@@ -1,0 +1,23 @@
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+
+# --- Dependencies ---
+node_modules/
+venv/
+env/
+__pycache__/
+
+# --- Environment Variables ---
+.env
+.env.local
+
+# --- Build/Dist folders ---
+dist/
+build/
+out/
+
+# --- IDE/Editor settings ---
+.vscode/
+.idea/
+*.log
