@@ -151,9 +151,8 @@ const OrderDetail = () => {
                 © {new Date().getFullYear()} Sunny Mobiles. All Rights Reserved.
             </div>
 
-            {/* ========================================== */}
-            {/* NEW TECH-ECOMMERCE SUCCESS MODAL          */}
-            {/* ========================================== */}
+            {/* NEW TECH-ECOMMERCE SUCCESS MODAL*/}
+            
             {showSuccessModal && (
                 <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 z-50">
                     <div className="bg-slate-900 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl border border-slate-800 relative overflow-hidden transform scale-100 transition-all duration-300">
