@@ -42,6 +42,10 @@ const Listproducts = () => {
     });
   };
 
+  const goToDetails = (item) => {
+    navigate(`/product-details/${item._id}`);
+  };
+
   return (
     <>
       <Navbar />
@@ -59,7 +63,10 @@ const Listproducts = () => {
                 className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-200"
               >
                 {/* Image */}
-                <div className="bg-[#f5f0e8] h-44 flex items-center justify-center p-4">
+                <div
+                  className="bg-[#f5f0e8] h-44 flex items-center justify-center p-4 cursor-pointer"
+                  onClick={() => goToDetails(item)}
+                >
                   <img
                     src={item.image}
                     alt={item.model}
@@ -69,7 +76,12 @@ const Listproducts = () => {
 
                 {/* Info */}
                 <div className="p-4">
-                  <p className="font-bold text-gray-900 text-sm leading-snug">{item.model}</p>
+                  <p
+                    className="font-bold text-gray-900 text-sm leading-snug cursor-pointer"
+                    onClick={() => goToDetails(item)}
+                  >
+                    {item.model}
+                  </p>
                   <p className="text-gray-400 text-xs mt-1 line-clamp-2">{item.description}</p>
 
                   <div className="flex gap-2 mt-2">

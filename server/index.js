@@ -6,20 +6,13 @@ const webRoutes = require('./Routes/appRoute')
 const Router = require('./Routes/authRoute')
 
 
-
-
 const app= express()
 app.use(express.json())
 
 app.use(cors())
 
-
-
-
 app.use('/api/ecommerce',webRoutes)
 app.use('/api/auth', Router)
-
-
 
 
 mongoose.connect(process.env.dbUrl).then(()=>{
