@@ -32,7 +32,7 @@ export default function Orders() {
 
   function updateStatus(id, newStatus) {
     axios.put(
-      `https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/update-order-status/${id}`,
+      `https://mobile-e-commerce-production-e6b9.up.railway.app/api/auth/update-order-status/${id}`,
       { status: newStatus },
       { headers: { Authorization: `Bearer ${token}` } }
     )
@@ -48,7 +48,7 @@ export default function Orders() {
 
   useEffect(() => {
     axios.get(
-      "https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/view-orders",
+      "https://mobile-e-commerce-production-e6b9.up.railway.app/api/auth/view-orders",
       { headers: { Authorization: `Bearer ${token}` } }
     )
     .then((res)=>{

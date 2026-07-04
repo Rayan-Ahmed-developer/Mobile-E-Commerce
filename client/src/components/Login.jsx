@@ -24,7 +24,7 @@ const LoginForm = () => {
     e.preventDefault();
     console.log("Submitting login form with:", loginForm);
     try {
-      const res = await axios.post("https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/login", loginForm);
+      const res = await axios.post("https://mobile-e-commerce-production-e6b9.up.railway.app/api/auth/login", loginForm);
       console.log("Login response:", res.data);
       
       if (res.data.token) {

@@ -16,7 +16,7 @@ const Listproducts = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/product/${model}`);
+      const res = await axios.get(`https://mobile-e-commerce-production-e6b9.up.railway.app/api/ecommerce/product/${model}`);
       setProducts(res.data.phones || []);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -26,7 +26,7 @@ const Listproducts = () => {
   const addToCart = (item) => {
     const token = localStorage.getItem("token");
     axios
-      .post("https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/add-to-cart", { productId: item._id }, {
+      .post("https://mobile-e-commerce-production-e6b9.up.railway.app/api/auth/add-to-cart", { productId: item._id }, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {

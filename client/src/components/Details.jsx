@@ -14,7 +14,7 @@ const Details = () => {
     if (!productDetails) return;
     const token = localStorage.getItem("token");
     axios
-      .post("https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/add-to-cart", { productId: productDetails._id }, {
+      .post("https://mobile-e-commerce-production-e6b9.up.railway.app/api/auth/add-to-cart", { productId: productDetails._id }, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => { setAdded(true); setTimeout(() => setAdded(false), 2000); })
@@ -29,7 +29,7 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/click-product/${id}`)
+      .get(`https://mobile-e-commerce-production-e6b9.up.railway.app/api/ecommerce/click-product/${id}`)
 
       .then((res) => {setproductDetails(res.data.product)
     console.log("Fetched product details:", res.data)

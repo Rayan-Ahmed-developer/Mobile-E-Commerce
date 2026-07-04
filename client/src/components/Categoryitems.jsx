@@ -10,7 +10,7 @@ const Categoryitems = () => {
 
   useEffect(() => {
     axios
-      .get(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/category/${name}`)
+      .get(`https://mobile-e-commerce-production-e6b9.up.railway.app/api/ecommerce/category/${name}`)
       .then((res) => {setCategoryItems(res.data.categoryItems)
       })
 
