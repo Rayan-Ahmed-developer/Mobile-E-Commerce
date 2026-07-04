@@ -10,6 +10,7 @@ import OrderDetail from '../components/OrderDetail';
 import Adminpanel from '../components/Adminpanel/AdminPanel';
 import HeroOrder from '../components/HeroOrder';
 import ProtectedAdmin from './protectedAdmin';
+import ProtectedRoute from './ProtectedRoute';
 
 
 export default function AppRoutes() {
@@ -21,7 +22,11 @@ export default function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/order-detail" element={<OrderDetail />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={
+          <ProtectedRoute>
+            <Cart />
+          </ProtectedRoute>
+        } />
         <Route path="/Categoryitems/:name" element={<Categoryitems />} />
         <Route path="/product/:model" element={<Listproducts/>}/>
         <Route path="/product-details/:id" element={<Details />} />
