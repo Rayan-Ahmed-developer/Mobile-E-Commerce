@@ -25,7 +25,7 @@ export default function Products() {
 
   useEffect(() => {
     axios
-      .get("https://mobile-e-commerce-production.up.railway.app/api/ecommerce/phone-list")
+      .get("https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/phone-list")
       .then((res) => {
         setProducts(res.data.phones || []);
         setLoading(false);
@@ -87,7 +87,7 @@ export default function Products() {
 
     if (editId) {
       axios
-        .put(`https://mobile-e-commerce-production.up.railway.app/api/ecommerce/update-one/${editId}`, payload)
+        .put(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/update-one/${editId}`, payload)
         .then(() => {
           setProducts((prev) =>
             prev.map((p) => (p._id === editId ? { ...p, ...payload } : p))
@@ -99,7 +99,7 @@ export default function Products() {
         .catch((err) => console.error(err));
     } else {
       axios
-        .post("https://mobile-e-commerce-production.up.railway.app/api/ecommerce/add-one", payload)
+        .post("https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/add-one", payload)
         .then((res) => {
           setProducts([...products, res.data.phone]);
           setShowModal(false);
@@ -112,7 +112,7 @@ export default function Products() {
   function handleDelete(id) {
     if (window.confirm("Are you sure you want to delete this product?")) {
       axios
-        .delete(`https://mobile-e-commerce-production.up.railway.app/api/ecommerce/delete-one/${id}`)
+        .delete(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/delete-one/${id}`)
         .then(() => setProducts(products.filter((p) => p._id !== id)))
         .catch((err) => console.error(err));
     }
@@ -120,7 +120,7 @@ export default function Products() {
 
   function toggleStatus(id) {
     axios
-      .put(`https://mobile-e-commerce-production.up.railway.app/api/ecommerce/toggle-status/${id}`)
+      .put(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/toggle-status/${id}`)
       .then((res) => {
         const newStatus = res.data.newStatus;
         setProducts(

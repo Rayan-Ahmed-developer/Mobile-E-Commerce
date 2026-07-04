@@ -15,7 +15,7 @@ const Navbar = () => {
       return;
     }
     try {
-      const res = await axios.get(`https://mobile-e-commerce-production.up.railway.app/api/ecommerce/search/${searchBar}`);
+      const res = await axios.get(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/ecommerce/search/${searchBar}`);
       setsearchResult(res.data.phones || []);
     } catch (error) {
       console.error("Error searching mobiles:", error);

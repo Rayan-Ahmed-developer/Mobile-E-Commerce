@@ -10,7 +10,7 @@ const Cart = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("https://mobile-e-commerce-production.up.railway.app/api/auth/get-cart-items", {
+      .get("https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/get-cart-items", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {setcartItems(res.data.items)
@@ -22,7 +22,7 @@ const Cart = () => {
   const removeFromCart = (productId) => {
     const token = localStorage.getItem("token");
     axios
-      .delete(`https://mobile-e-commerce-production.up.railway.app/api/auth/remove-from-cart/${productId}`, {
+      .delete(`https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/remove-from-cart/${productId}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => setcartItems((prev) => prev.filter((item) => item._id !== productId)))

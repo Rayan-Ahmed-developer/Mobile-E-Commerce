@@ -47,7 +47,7 @@ const OrderDetail = () => {
         }
 
         try {
-            const res = await axios.post("https://mobile-e-commerce-production.up.railway.app/api/auth/place-order", {
+            const res = await axios.post("https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/place-order", {
                 productId,
                 type: data.type,
                 ...orderDetails

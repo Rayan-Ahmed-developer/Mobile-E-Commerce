@@ -24,7 +24,7 @@ export default function Dashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "https://mobile-e-commerce-production.up.railway.app/api/auth/dashboard-stats",
+        "https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/dashboard-stats",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ export default function Dashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "https://mobile-e-commerce-production.up.railway.app/api/auth/view-orders",
+        "https://mobile-e-commerce-production-e6b9.up.railway.app//api/auth/view-orders",
         {
           headers: {
             Authorization: `Bearer ${token}`,
